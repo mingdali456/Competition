@@ -47,7 +47,7 @@ class Solution(object):
 Complexity: `O(n)` where `n` is the length of the given number.
 ## [1947. Maximum Compatibility Score Sum](https://leetcode-cn.com/contest/weekly-contest-251/problems/maximum-compatibility-score-sum/)
 We can just solve the question using depth first search (DFS). 
-To save the time of comparing the answers from each student and each mentor, we use an m-by-m matrix `match` to present the <b>compatibility score<\b>. `match[i][j]` means the compatibility score of the i-th student and the j-th mentor. 
+To save the time of comparing the answers from each student and each mentor, we use an m-by-m matrix `match` to present the <b>compatibility score</b>. `match[i][j]` means the compatibility score of the i-th student and the j-th mentor. 
 For DFS, we use a mask to mark which mentor has been selected and the recursion will go through all possibilities.
 ```
 class Solution(object):
