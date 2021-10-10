@@ -1,6 +1,5 @@
 # Weekly Contest 262
-Chinese site ranking: 44
-
+Chinese site ranking: 44  
 Global site ranking: 75
 ## [5894. Two Out of Three](https://leetcode-cn.com/contest/weekly-contest-262/problems/two-out-of-three/)
 We simply need to use a dict to capture the overlapped elements. Note that each array may contain duplicates. 
