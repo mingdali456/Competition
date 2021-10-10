@@ -166,4 +166,4 @@ class Solution(object):
                     ans = min(ans, abs(val + suf_sum[n - i][idx - 1]))
         return ans
 ```
-Complexity: `O((2^n) * log(2^n))` where `n` is half length of `nums`.
+Complexity: `O(n * (2^n) * log(2^n))` where `n` is half length of `nums`.
