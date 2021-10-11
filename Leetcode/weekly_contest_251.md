@@ -3,7 +3,7 @@ Chinese site ranking: 30
 Global site ranking: 66
 ## [1945. Sum of Digits of String After Convert](https://leetcode-cn.com/contest/weekly-contest-251/problems/sum-of-digits-of-string-after-convert/)
 We can just concate the converted digits together and then calculate the sum of digits by `k` times.
-```
+``` python
 class Solution(object):
     def getLucky(self, s, k):
         """
@@ -23,7 +23,7 @@ Complexity: `O(n * k)` where `n` is the length of the string `s` and `k` is the 
 We solve the question with the greedy algorithm. 
 To generate the largest number, we need to iterate from the most significant digit to the least significant digit. (From left to right in the given number)
 Considering that the goal is to mutate over a substring, we will start from the first char that is greater after mutation and stop at first char that is smaller after mutation.
-```
+``` python
 class Solution(object):
     def maximumNumber(self, num, change):
         """
@@ -49,7 +49,7 @@ Complexity: `O(n)` where `n` is the length of the given number.
 We can just solve the question using depth first search (DFS). 
 To save the time of comparing the answer from each student and each mentor, we use an m-by-m matrix `match` to present the <b>compatibility score</b>. `match[i][j]` means the compatibility score of the i-th student and the j-th mentor. 
 For DFS, we use a mask to mark which mentor has been selected and the recursion will go through all possibilities.
-```
+``` python
 class Solution(object):
     def maxCompatibilitySum(self, students, mentors):
         """
@@ -88,7 +88,7 @@ First, we create the Trie `tree` by inserting all the nodes with `paths`. In eac
 Second, we need to go through the graph and summarize the pattern of all subtrees. To capture the pattern, we simply use post-order traversal to generate the <b>pattern string</b>. The nodes will be distinguished from each other by parentheses. Since the same pattern could result in different strings, we have to sort the children by the node names. A dict `mp` will be used to map the pattern string with its corresponding parent node. Based on the mapping results, we update the second element for the nodes to be deleted.
 
 Finally, we collect the result by depth first search (DFS). Those nodes to be deleted will be ignored during the traversal.
-```
+``` python
 class Solution(object):
     def deleteDuplicateFolder(self, paths):
         """

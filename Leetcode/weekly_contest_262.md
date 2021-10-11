@@ -4,7 +4,7 @@ Global site ranking: 75
 ## [5894. Two Out of Three](https://leetcode-cn.com/contest/weekly-contest-262/problems/two-out-of-three/)
 We simply need to use a dict to capture the overlapped elements. Note that each array may contain duplicates. 
 This is why I transform the list into a set before updating the dict.
-```
+``` python
 class Solution(object):
     def twoOutOfThree(self, nums1, nums2, nums3):
         """
@@ -26,7 +26,7 @@ class Solution(object):
 Complexity: `O(n)` where `n` is the sum of the the length of `nums1`, `nums2`, and `nums3`.
 ## [5895. Minimum Operations to Make a Uni-Value Grid](https://leetcode-cn.com/contest/weekly-contest-262/problems/minimum-operations-to-make-a-uni-value-grid/)
 The optimal way is to change all the values to be their median.
-```
+``` python
 class Solution(object):
     def minOperations(self, grid, x):
         """
@@ -55,7 +55,7 @@ For the `update` function, we need dict to capture the mapping from each timesta
 For the `current` function, we can just create class variables to keep track of the most recent timestamp and price.
 To fetch the maximum/minimum price, we need a sorted list which support the query/update operation in `O(log(n))`. 
 We have to be careful when dealing with the <b>correcting</b> case because all class variables may need to be updated.
-```
+``` python
 from sortedcontainers import SortedList
 
 class StockPrice(object):
@@ -128,7 +128,7 @@ The set structure is used for reducing the cost of time and space.
 Finally, when matching the first half and the second half for `array1` and `array2`, we use binary search to find the minimum difference. 
 For each `val` in `pre_sum[x]`, we simply search `suf_sum[n - x]` for the smallest value that greater or equal to `-val`.
 Considering that there are two possiblities: positive difference and negative difference, we should also consider the largest value that smaller than `-val`.
-```
+``` python
 class Solution(object):
     def minimumDifference(self, nums):
         """
